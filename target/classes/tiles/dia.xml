@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="baseLayout"  template="/WEB-INF/views/dia_layout.jsp">    
+      <put-attribute name="dia_top" value="/WEB-INF/views/dia_top.jsp" />      
+      <put-attribute name="body" value="" />
+      <put-attribute name="dia_footer" value="/WEB-INF/views/dia_footer.jsp" />
+   </definition>
+    <definition name="dia_main" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_main.jsp" />      
+   </definition>
+    <definition name="dia_input" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_input.jsp" />      
+   </definition>
+   <definition name="dia_list" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_list.jsp" />      
+   </definition>
+   <definition name="dia_detail" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_detail.jsp" />      
+   </definition>
+   <definition name="dia_detaild" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_detaild.jsp" />      
+   </definition>
+     <definition name="dia_modify" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/dia_modify.jsp" />      
+   </definition>
+        <definition name="login" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/login.jsp" />      
+   </definition>
+   <definition name="newmember" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/newmember.jsp" />      
+   </definition>
+   <definition name="listaa" extends="baseLayout">     
+      <put-attribute name="body" value="/WEB-INF/views/listaa.jsp" />      
+   </definition>
+   
+   
+   </tiles-definitions>

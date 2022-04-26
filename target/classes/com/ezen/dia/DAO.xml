@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezen.dia.Service">
+<insert id="insert">
+insert into dia (dnum,name,title,price,content,readcnt,step,picture)
+values(dnum_seq.nextval,#{param1},#{param2},#{param3},#{param4},0,0,#{param5})
+</insert>
+<select id="out" resultType="com.ezen.dia.DiaDTO">
+select * from dia order by dnum desc
+</select>
+<delete id="delete">
+delete from dia where dnum = #{param1}
+</delete>
+<select id="detail" resultType="com.ezen.dia.DiaDTO" >
+select * from dia where dnum = #{param1}
+</select>
+<select id="detaild" resultType="com.ezen.dia.DiaDTO" >
+select * from dia where dnum = #{param1}
+</select>
+<update id="readcnt">
+update dia set readcnt = readcnt +1 where dnum = #{param1}
+</update>
+<select id="modify" resultType="com.ezen.dia.DiaDTO">
+select * from dia where dnum = #{param1}
+</select>
+<update id="modifya">
+update dia set name = #{param1}, title = #{param2},price = #{param3},content = #{param4},picture = #{param5} where dnum = #{param6}
+</update>
+<!-- 로그인 -->
+<select id="login" resultType="com.ezen.dia.MemberDTO">
+	select * from member2 where id=#{param1} and pw=#{param2}
+</select>
+<!-- 회원가입 -->
+<insert id="newmem">
+	insert into member2 values(#{param1}, #{param2}, #{param3}, #{param4})
+</insert>
+<select id="lista" resultType="com.ezen.dia.DiaDTO">
+ select * from dia 
+</select>
+
+
+</mapper>
